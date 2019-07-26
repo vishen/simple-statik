@@ -10,6 +10,14 @@ changed to behave as a prefix with a `prefix=true` config.
 
 By default will run on port `8081`.
 
+### Docker
+
+```
+$ docker run -p "8081:8081" vishen/simple-statik -config example.config
+```
+
+### Binary
+
 ```
 $ cat example.config
 /

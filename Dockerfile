@@ -5,5 +5,6 @@ RUN CGO_ENABLED=0 go build -tags netgo -installsuffix netgo
 
 FROM scratch
 WORKDIR /app
+ADD example.config example.config
 COPY --from=builder /go/src/github.com/vishen/simple-statik/simple-statik simple-statik
 ENTRYPOINT ["/app/simple-statik"]
